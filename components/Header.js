@@ -7,6 +7,7 @@ import { Heading } from "./Heading";
 import { HorizontalDivider } from "./HorizontalDivider";
 
 const Profile = ({ name, description, profilePicture }) => {
+  console.error(profilePicture);
   return (
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
