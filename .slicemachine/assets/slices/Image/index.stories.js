@@ -5,8 +5,11 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"image","items":[],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.prismic.io/nextjs-starter-prismic-blog/bbde7d62-670b-4592-b76c-4047d0cf1635_jake-melara-Yh6K2eTr_FY-unsplash.jpg?w=900&h=500&fit=crop"},"caption":[{"type":"paragraph","text":"Commodo magna dolor est aute in enim do in minim excepteur pariatur duis culpa dolor. Fugiat non ipsum cupidatat proident velit aute Lorem cillum reprehenderit Lorem occaecat esse cillum. Aute aliqua dolor ad elit et.","spans":[]}]},"id":"_Default"}} />
-_Default.storyName = 'Default'
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":4000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587653915936-5623ea0b949a"},"caption":[{"type":"paragraph","text":"Anim esse laborum consectetur. Eiusmod consectetur mollit quis reprehenderit laboris cupidatat nostrud veniam non.","spans":[]}],"figureClassName":"knife","divClassName":"volume"},"id":"_Default","slice_type":"image"}} />
+_Default.storyName = ''
 
-export const _Wide = () => <MyComponent slice={{"variation":"wide","name":"Wide","slice_type":"image","items":[],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=900&h=500&fit=crop"},"caption":[{"type":"paragraph","text":"Elit sunt cillum deserunt in qui culpa anim veniam amet dolore consectetur pariatur magna dolor ex.","spans":[]}]},"id":"_Wide"}} />
-_Wide.storyName = 'Wide'
+export const _Wide = () => <MyComponent slice={{"variation":"wide","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":3882,"height":2584},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1498050108023-c5249f4df085"},"caption":[{"type":"paragraph","text":"Aliqua ea eu nostrud minim sit dolor labore Lorem ipsum dolor pariatur dolore. Et aute nisi reprehenderit voluptate tempor ex mollit voluptate.","spans":[]}]},"id":"_Wide","slice_type":"image"}} />
+_Wide.storyName = ''
+
+export const _Inarticle = () => <MyComponent slice={{"variation":"inarticle","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":3168,"height":4752},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1589321599763-d66926c29613"},"caption":[{"type":"paragraph","text":"Deserunt ullamco do irure sit anim laborum reprehenderit sint. Culpa ipsum aliqua ipsum laboris deserunt consequat ipsum. Ut id et fugiat ullamco proident.","spans":[]}],"align":"heart","containerclassname":"brain"},"id":"_Inarticle","slice_type":"image"}} />
+_Inarticle.storyName = ''

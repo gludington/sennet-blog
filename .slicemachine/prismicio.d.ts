@@ -286,6 +286,26 @@ interface ImageSliceDefaultPrimary {
      *
      */
     caption: prismicT.RichTextField;
+    /**
+     * Figure Class Name field in *Image → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.figureClassName
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    figureClassName: prismicT.KeyTextField;
+    /**
+     * divClassName field in *Image → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.divClassName
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    divClassName: prismicT.KeyTextField;
 }
 /**
  * Default variation for Image Slice
@@ -332,10 +352,65 @@ interface ImageSliceWidePrimary {
  */
 export type ImageSliceWide = prismicT.SharedSliceVariation<"wide", Simplify<ImageSliceWidePrimary>, never>;
 /**
+ * Primary content in Image → Primary
+ *
+ */
+interface ImageSliceInarticlePrimary {
+    /**
+     * Image field in *Image → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Caption field in *Image → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: Optional - Caption under the image
+     * - **API ID Path**: image.primary.caption
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    caption: prismicT.RichTextField;
+    /**
+     * align field in *Image → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.align
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    align: prismicT.KeyTextField;
+    /**
+     * containerClassName field in *Image → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.containerclassname
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    containerclassname: prismicT.KeyTextField;
+}
+/**
+ * inarticle variation for Image Slice
+ *
+ * - **API ID**: `inarticle`
+ * - **Description**: `Image`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSliceInarticle = prismicT.SharedSliceVariation<"inarticle", Simplify<ImageSliceInarticlePrimary>, never>;
+/**
  * Slice variation for *Image*
  *
  */
-type ImageSliceVariation = ImageSliceDefault | ImageSliceWide;
+type ImageSliceVariation = ImageSliceDefault | ImageSliceWide | ImageSliceInarticle;
 /**
  * Image Shared Slice
  *
@@ -438,6 +513,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ArticleDocumentData, ArticleDocumentDataSlicesSlice, ArticleDocument, NavigationDocumentData, NavigationDocumentDataLinksItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ContactFormSliceDefault, ContactFormSliceVariation, ContactFormSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceWidePrimary, ImageSliceWide, ImageSliceInarticlePrimary, ImageSliceInarticle, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

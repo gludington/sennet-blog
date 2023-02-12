@@ -27,6 +27,20 @@
             "allowTargetBlank": true,
             "single": "paragraph,em,strong"
           }
+        },
+        "figureClassName": {
+          "type": "Text",
+          "config": {
+            "label": "Figure Class Name",
+            "placeholder": ""
+          }
+        },
+        "divClassName": {
+          "type": "Text",
+          "config": {
+            "label": "divClassName",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
@@ -54,6 +68,48 @@
             "placeholder": "Optional - Caption under the image",
             "allowTargetBlank": true,
             "single": "paragraph,em,strong"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "inarticle",
+      "name": "inarticle",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Image",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Caption",
+            "placeholder": "Optional - Caption under the image",
+            "allowTargetBlank": true,
+            "single": "paragraph,em,strong"
+          }
+        },
+        "align": {
+          "type": "Text",
+          "config": {
+            "label": "align",
+            "placeholder": ""
+          }
+        },
+        "containerclassname": {
+          "type": "Text",
+          "config": {
+            "label": "containerClassName",
+            "placeholder": ""
           }
         }
       },
