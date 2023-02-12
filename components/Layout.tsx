@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ReactElement } from "react";
+import Seal from "./seal";
 
 export const Layout = ({
   navigation,
@@ -27,7 +28,9 @@ export const Layout = ({
       />
       <main>
         <div id="parchment"></div>
-        <div id="contain">{children}</div>
+        <div id="contain">{children}
+          <Seal />
+        </div>
       </main>
       <Footer withSignUpForm={withSignUpForm} settings={settings} />
     </div>
