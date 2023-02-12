@@ -6,7 +6,6 @@ import { Bounded } from "../../components/Bounded";
 
 const Image = ({ slice }) => {
   const image = slice.primary.image;
-  console.warn
   return (
     <Bounded as="section" size={slice.variation === "wide" ? "widest" : "base"}>
       <figure className={`grid grid-cols-1 gap-4 ml-2${slice.primary.figureClassName ? ` ${slice.primary.figureClassName}` : ''}`}>
