@@ -6,7 +6,7 @@ import { Bounded } from "../../components/Bounded";
 
 const Figure = ({ slice, image }) => {
   return (
-    <figure className={`bg-slate-100 grid grid-cols-1 gap-4 ml-2${slice.primary.figureClassName ? ` ${slice.primary.figureClassName}` : ''}`}>
+    <figure className={`grid grid-cols-1 gap-4${slice.primary.figureClassName ? ` ${slice.primary.figureClassName}` : ''}`}>
         {prismicH.isFilled.image(image) && (
           <div className="">
             <PrismicNextImage field={image} />
