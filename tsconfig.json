@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Bounded.js", "components/Header.js", "components/HorizontalDivider.js", "components/Heading.js", "components/Header.js", "components/Footer.js", "components/Bounded.js"  ],
   "exclude": [
     "node_modules"
   ]

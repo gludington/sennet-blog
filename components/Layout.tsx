@@ -17,7 +17,10 @@ export const Layout = ({
         navigation={navigation}
         settings={settings}
       />
-      <main>{children}</main>
+      <main>
+        <div id="parchment"></div>
+        <div id="contain">{children}</div>
+      </main>
       <Footer withSignUpForm={withSignUpForm} settings={settings} />
     </div>
   );

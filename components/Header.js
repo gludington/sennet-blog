@@ -51,14 +51,14 @@ const NavItem = ({ children }) => {
 };
 
 export const Header = ({
-  withDivider = true,
+  withDivider = false,
   withProfile = true,
   navigation,
   settings,
 }) => {
   return (
-    <Bounded as="header">
-      <div className="grid grid-cols-1 justify-items-center gap-20">
+    <Bounded as="header" className="pt-8 md:pt-10 lg:pt-12">
+      <div className="grid grid-cols-1 justify-items-center gap-5">
         <nav>
           <ul className="flex flex-wrap justify-center gap-10">
             <NavItem>

@@ -61,7 +61,7 @@ const SignUpForm = ({ settings }) => {
   );
 };
 
-export const Footer = ({ withSignUpForm = true, settings }) => {
+export const Footer = ({ withSignUpForm = false, settings }) => {
   return (
     <Bounded as="footer">
       <div className="grid grid-cols-1 justify-items-center gap-24">
