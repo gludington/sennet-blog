@@ -6,7 +6,7 @@ export default function Seal() {
             <p className="cachet">
                 <Image src="/seal.png" width={75} height={75} alt="All For Me, One for Me" className="w-2" />
             </p>
-            <div id="signature">Kryn&apos;s Greatest Hero<br />Sennet</div>
+            <div id="signature">Krynn&apos;s Greatest Hero<br />Sennet</div>
         </>
     )
 }
