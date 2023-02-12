@@ -1,13 +1,21 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { ReactElement } from "react";
 
 export const Layout = ({
   navigation,
   settings,
-  withHeaderDivider,
-  withProfile,
-  withSignUpForm,
+  withHeaderDivider = false,
+  withProfile = false,
+  withSignUpForm = false,
   children,
+}: {
+    navigation: string,
+    settings: any,
+    withHeaderDivider?: boolean;
+    withProfile?: boolean;
+    withSignUpForm?: boolean;
+    children: ReactElement
 }) => {
   return (
     <div className="text-slate-700">

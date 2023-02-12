@@ -83,9 +83,11 @@ const Index = ({ articles, navigation, settings }) => {
   return (
     <Layout
       withHeaderDivider={false}
+      withProfile={true}
       navigation={navigation}
       settings={settings}
     >
+      <>
       <Head>
         <title>{prismicH.asText(settings.data.name)}</title>
       </Head>
@@ -95,7 +97,8 @@ const Index = ({ articles, navigation, settings }) => {
             <Article key={article.id} article={article} />
           ))}
         </ul>
-      </Bounded>
+        </Bounded>
+        </>
     </Layout>
   );
 };
