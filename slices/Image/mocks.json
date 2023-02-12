@@ -139,14 +139,9 @@
           }
         ]
       },
-      "align": {
+      "figureClassName": {
         "__TYPE__": "FieldContent",
-        "value": "heart",
-        "type": "Text"
-      },
-      "containerclassname": {
-        "__TYPE__": "FieldContent",
-        "value": "brain",
+        "value": "policeman",
         "type": "Text"
       }
     },

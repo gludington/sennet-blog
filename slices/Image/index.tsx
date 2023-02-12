@@ -4,11 +4,9 @@ import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "../../components/Bounded";
 
-const Image = ({ slice }) => {
-  const image = slice.primary.image;
+const Figure = ({ slice, image }) => {
   return (
-    <Bounded as="section" size={slice.variation === "wide" ? "widest" : "base"}>
-      <figure className={`grid grid-cols-1 gap-4 ml-2${slice.primary.figureClassName ? ` ${slice.primary.figureClassName}` : ''}`}>
+    <figure className={`bg-slate-100 grid grid-cols-1 gap-4 ml-2${slice.primary.figureClassName ? ` ${slice.primary.figureClassName}` : ''}`}>
         {prismicH.isFilled.image(image) && (
           <div className="">
             <PrismicNextImage field={image} />
@@ -20,6 +18,18 @@ const Image = ({ slice }) => {
           </figcaption>
         )}
       </figure>
+  )
+}
+
+const Image = ({ slice }) => {
+  const image = slice.primary.image;
+  if (slice.variation === "inarticle") {
+    return <Figure slice={slice} image={image}/>
+  }
+      
+  return (
+    <Bounded as="section" size={slice.variation === "wide" ? "widest" : "base"}>
+      <Figure slice={slice} image={image}/>
     </Bounded>
   );
 };

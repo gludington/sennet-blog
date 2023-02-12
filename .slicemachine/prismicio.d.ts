@@ -377,25 +377,15 @@ interface ImageSliceInarticlePrimary {
      */
     caption: prismicT.RichTextField;
     /**
-     * align field in *Image → Primary*
+     * figureClassName field in *Image → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: image.primary.align
+     * - **API ID Path**: image.primary.figureClassName
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    align: prismicT.KeyTextField;
-    /**
-     * containerClassName field in *Image → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: image.primary.containerclassname
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    containerclassname: prismicT.KeyTextField;
+    figureClassName: prismicT.KeyTextField;
 }
 /**
  * inarticle variation for Image Slice

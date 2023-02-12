@@ -98,17 +98,10 @@
             "single": "paragraph,em,strong"
           }
         },
-        "align": {
+        "figureClassName": {
           "type": "Text",
           "config": {
-            "label": "align",
-            "placeholder": ""
-          }
-        },
-        "containerclassname": {
-          "type": "Text",
-          "config": {
-            "label": "containerClassName",
+            "label": "figureClassName",
             "placeholder": ""
           }
         }
