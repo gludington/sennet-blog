@@ -65,7 +65,7 @@ main p {
   text-align: justify;
 }
 
-div p:not(:first-child)::first-letter {
+div p::first-letter {
   float: left;
   font: 2.7em/1em Morris;
   text-shadow: 1px 1px 1px #000;
