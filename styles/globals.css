@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.im-r {
+  @apply float-none sm:float-right sm:ml-2
+}
+
 @font-face {
   font-family: Morris;
   src: url(https://cdn.statically.io/gh/EmmesCodes/Tipografias/dae9f5bb/MorrisInitials.ttf);
