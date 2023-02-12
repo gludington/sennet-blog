@@ -22,14 +22,14 @@ const LatestArticle = ({ article }) => {
 
   return (
     <li>
-      <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+      <h1 className="mb-3 text-3xl inkTitle tracking-tighter text-slate-800 md:text-4xl flex ">
         <PrismicLink document={article}>
           <PrismicText field={article.data.title} />
         </PrismicLink>
       </h1>
-      <p className="font-serif italic tracking-tighter text-slate-500">
+      <h3 className="font-serif italic tracking-tighter text-slate-500">
         {dateFormatter.format(date)}
-      </p>
+      </h3>
     </li>
   );
 };
@@ -55,7 +55,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
       <Bounded>
         <PrismicLink
           href="/"
-          className="font-semibold tracking-tight text-slate-400"
+          className="font-semibold tracking-tight text-slate-800"
         >
           &larr; Back to articles
         </PrismicLink>
@@ -65,9 +65,9 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
           <h1 className="mb-3 text-3xl inkTitle tracking-tighter text-slate-800 md:text-4xl">
             <PrismicText field={article.data.title} />
           </h1>
-          <p className="font-serif italic tracking-tighter text-slate-500">
+          <h3 className="font-serif italic tracking-tighter text-slate-500">
             {dateFormatter.format(date)}
-          </p>
+          </h3>
         </Bounded>
         <SliceZone slices={article.data.slices} components={components} />
       </article>
