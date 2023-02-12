@@ -7,7 +7,7 @@ const Quote = ({ slice }) => {
   return (
     <Bounded as="section" size="wide">
       {prismicH.isFilled.richText(slice.primary.quote) && (
-        <div className="font-serif text-3xl italic leading-relaxed text-center">
+        <div className="font-serif text-xl md:text-3xl italic leading-relaxed text-center">
           &ldquo;
           <PrismicText field={slice.primary.quote} />
           &rdquo;
