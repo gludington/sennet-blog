@@ -64,7 +64,7 @@ const SignUpForm = ({ settings }) => {
 export const Footer = ({ withSignUpForm = false, settings }) => {
   return (
     <Bounded as="footer">
-      <div className="grid grid-cols-1 justify-items-center gap-24">
+      {/*<div className="grid grid-cols-1 justify-items-center gap-24">
         <HorizontalDivider />
         {withSignUpForm && <SignUpForm settings={settings} />}
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight text-slate-500">
@@ -74,6 +74,7 @@ export const Footer = ({ withSignUpForm = false, settings }) => {
           </PrismicLink>
         </div>
       </div>
+  */}
     </Bounded>
   );
 };

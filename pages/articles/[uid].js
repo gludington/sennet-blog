@@ -62,7 +62,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
       </Bounded>
       <article>
         <Bounded className="pb-0">
-          <h1 className="mb-3 text-3xl font-semibold tracking-tighter text-slate-800 md:text-4xl">
+          <h1 className="mb-3 text-3xl inkTitle tracking-tighter text-slate-800 md:text-4xl">
             <PrismicText field={article.data.title} />
           </h1>
           <p className="font-serif italic tracking-tighter text-slate-500">
