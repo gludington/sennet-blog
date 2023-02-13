@@ -11,7 +11,7 @@ const Profile = ({ name, description, profilePicture }) => {
     <div className="px-4">
       <div className="grid max-w-lg grid-cols-1 justify-items-center gap-8">
         <PrismicLink href="/" tabIndex="-1">
-          <div className="relative h-40 w-40 overflow-hidden rounded-full bg-slate-300">
+          <div className="relative h-40 w-40">
             {prismicH.isFilled.image(profilePicture) && (
               <PrismicNextImage
                 field={profilePicture}
