@@ -101,8 +101,7 @@ export async function getStaticProps({ params, previewData }) {
   const latestArticles = await client.getAllByType("article", {
     limit: 3,
     orderings: [
-      { field: "my.article.publishDate", direction: "asc" },
-      { field: "document.first_publication_date", direction: "asc" },
+      { field: "document.first_publication_date", direction: "desc" },
     ],
   });
   const navigation = await client.getSingle("navigation");
