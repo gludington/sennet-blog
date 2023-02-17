@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-  font: var(--fontSize)/200% 'Bilbo Swash Caps', cursive;
+  font: var(--fontSize)/200% cursive;
   background: #fffef0;
   background-size: cover;
 }
