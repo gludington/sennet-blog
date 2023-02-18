@@ -23,18 +23,18 @@ const Profile = ({ name, description, profilePicture }) => {
         </PrismicLink>
         {(prismicH.isFilled.richText(name) ||
           prismicH.isFilled.richText(description)) && (
-          <div className="grid grid-cols-1 gap-2 text-center cursive">
+          <div className="grid grid-cols-1 gap-2 text-center">
             {prismicH.isFilled.richText(name) && (
               <Heading>
-                <PrismicLink href="/">
-                  <PrismicText field={name} />
+                <PrismicLink href="/" className="inkTitle">
+                  <PrismicText className="inkTitle" field={name} />
                 </PrismicLink>
               </Heading>
             )}
             {prismicH.isFilled.richText(description) && (
-              <p className="font-serif text-2xl italic leading-normal tracking-tight text-slate-500">
+              <span className="text-med md:text-xl italic leading-normal tracking-tight text-slate-500">
                 <PrismicText field={description} />
-              </p>
+              </span>
             )}
           </div>
         )}

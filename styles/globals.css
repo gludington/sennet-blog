@@ -92,10 +92,8 @@ div p::first-letter {
 }
 
 .inkTitle {
-  font-size: 3em;
 	font-family: Pirata One, sans-serif;
   text-align: center;
-  line-height: 3em;
 	color: black;
 	opacity: 0.6;
 }
