@@ -55,7 +55,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
       <Bounded>
         <PrismicLink
           href="/"
-          className="font-semibold tracking-tight text-slate-800"
+          className="font-semibold tracking-tight text-slate-800 cursive"
         >
           &larr; Back to articles
         </PrismicLink>
@@ -76,7 +76,7 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
           <div className="grid grid-cols-1 justify-items-center gap-16 md:gap-24">
             <HorizontalDivider />
             <div className="w-full">
-              <Heading size="2xl" className="mb-10">
+              <Heading size="2xl" className="mb-10 cursive">
                 Latest articles
               </Heading>
               <ul className="grid grid-cols-1 gap-12">

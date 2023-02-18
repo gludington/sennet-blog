@@ -19,8 +19,13 @@ html, body {
 	height: 100%;
 }
 
-body {
+.cursive {
   font: var(--fontSize)/200% cursive;
+  background-size: cover;
+}
+
+body {
+  font: var(--fontSize)/200% 'Garamond';
   background: #fffef0;
   background-size: cover;
 }
@@ -119,5 +124,6 @@ div p::first-letter {
 #signature {
   text-align: right;
   color: black;
+  font: var(--fontSize)/100% cursive;
   font-size: 250%;
 }
