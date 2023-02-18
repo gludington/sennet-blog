@@ -25,7 +25,7 @@ html, body {
 }
 
 body {
-  font: var(--fontSize)/200% 'Garamond';
+  font: var(--fontSize)/200% 'Libre Baskerville';
   background: #fffef0;
   background-size: cover;
 }
