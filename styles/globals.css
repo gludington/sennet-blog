@@ -6,6 +6,10 @@
   @apply float-none sm:float-right sm:ml-2
 }
 
+.im-l {
+  @apply float-none sm:float-left sm:ml-2
+}
+
 @font-face {
   font-family: Morris;
   src: url(https://cdn.statically.io/gh/EmmesCodes/Tipografias/dae9f5bb/MorrisInitials.ttf);

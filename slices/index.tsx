@@ -4,12 +4,14 @@ import ContactForm from './ContactForm';
 import Image from './Image';
 import Quote from './Quote';
 import Text from './Text';
+import Title from './Title';
 
 export {
 	ContactForm,
 	Image,
 	Quote,
 	Text,
+	Title,
 };
 
 export const components = {
@@ -17,4 +19,5 @@ export const components = {
 	image: Image,
 	quote: Quote,
 	text: Text,
+	title: Title,
 };
