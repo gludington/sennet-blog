@@ -26,7 +26,6 @@ export default Page;
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
-
   const page = await client.getByUID("page", params.uid);
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
@@ -46,7 +45,7 @@ export async function getStaticPaths() {
   const pages = await client.getAllByType("page");
 
   return {
-    paths: pages.map((page) => prismicH.asLink(page)),
+    paths: pages.filter(page => page.uid !== 'about').map((page) => prismicH.asLink(page)),
     fallback: false,
   };
 }
