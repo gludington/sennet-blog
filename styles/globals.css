@@ -72,7 +72,6 @@ August 2021 : ok on Chrome v92+, Firefox v90+, Edge v92+
 }
 
 main p {
-  font-size: 1.25em;
   color: #7F3300;
   margin-top: .75em;
   text-align: justify;
@@ -80,7 +79,7 @@ main p {
 
 div p::first-letter {
   float: left;
-  font: 2.7em/1em Morris;
+  font: 3.0em/1em Morris;
   text-shadow: 1px 1px 1px #000;
   margin: 0 .5rem;
 }
