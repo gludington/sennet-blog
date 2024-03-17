@@ -11,7 +11,7 @@ This sample blog is an excellent starting point to explore [Next.js][nextjs] and
 
 &nbsp;
 
-## 🚀 Quick Start
+## 🚀 Quick Starts
 
 To start a new project using this starter, run the following commands in your terminal:
 
