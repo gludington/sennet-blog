@@ -100,8 +100,8 @@ const Index = ({ page, navigation, settings }) => {
         <Bounded size="widest">
           <>
         <ul className="grid grid-cols-1 gap-16">
-              {articles.map((article, idx) => (
-                  <Article key={article.id} article={article} index={page.page * PAGE_SIZE + idx} />
+              {articles.map((article) => (
+                  <Article key={article.id} article={article} />
           ))}
             </ul>
             <div className="grid">

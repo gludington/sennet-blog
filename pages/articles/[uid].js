@@ -72,6 +72,7 @@ const Article = ({ article, nextArticle, previousArticle, latestArticles, naviga
         </Bounded>
         <SliceZone slices={article.data.slices} components={components} />
       </article>
+      <Bounded>
       <HorizontalDivider />
       <div class="w-full flex gap-16 md:gap">
         <div className="w-1/2">
@@ -90,7 +91,8 @@ const Article = ({ article, nextArticle, previousArticle, latestArticles, naviga
               </Heading>
                     <LatestArticle key={nextArticle.id} article={nextArticle} />
             </div>
-    </div>
+        </div>
+        </Bounded>
         
     </Layout>
   );
