@@ -10,7 +10,7 @@ export async function getStaticProps({ previewData }) {
 
   const page = await client.getByType("article", {
     orderings: [
-      { field: "document.first_publication_date", direction: "desc" },
+      { field: "document.first_publication_date", direction: "asc" },
     ],
     page: 1,
     pageSize: PAGE_SIZE
