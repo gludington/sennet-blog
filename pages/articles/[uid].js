@@ -85,11 +85,15 @@ const Article = ({ article, nextArticle, previousArticle, latestArticles, naviga
               </>
           ) : null}
             </div>
-            <div className="w-1/2">
-              <Heading size="2xl" className="mt-10 cursive">
-                Next:
-              </Heading>
-                    <LatestArticle key={nextArticle.id} article={nextArticle} />
+          <div className="w-1/2">
+            {nextArticle ? (
+              <>
+                <Heading size="2xl" className="mt-10 cursive">
+                  Next:
+                </Heading>
+                <LatestArticle key={nextArticle.id} article={nextArticle} />
+              </>
+            ) : null}
             </div>
         </div>
         </Bounded>
