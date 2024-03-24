@@ -85,6 +85,7 @@ const Article = ({ article }) => {
 const Index = ({ page, navigation, settings }) => {
   const articles = page.results;
   const router = useRouter();
+  
   return (
     <Layout
       withHeaderDivider={false}
@@ -99,8 +100,8 @@ const Index = ({ page, navigation, settings }) => {
         <Bounded size="widest">
           <>
         <ul className="grid grid-cols-1 gap-16">
-          {articles.map((article) => (
-            <Article key={article.id} article={article} />
+              {articles.map((article, idx) => (
+                  <Article key={article.id} article={article} index={page.page * PAGE_SIZE + idx} />
           ))}
             </ul>
             <div className="grid">

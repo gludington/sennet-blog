@@ -1,6 +1,6 @@
-import { createClient } from "../../prismicio";
+import { createClient, } from "../../prismicio";
 import ArticlePage, { PAGE_SIZE } from "../../components/ArticlePage"
-
+import * as prismic from "@prismicio/client";
 const Index = (props) => <ArticlePage {...props}/>
 
 export default Index;
@@ -23,13 +23,17 @@ export async function getStaticPaths() {
 export async function getStaticProps({ previewData, ...params }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByType("article", {
+  const page = await client.get({
+    predicates: [
+      prismic.predicate.at("document.type", "article")
+    ],
     orderings: [
-      { field: "document.first_publication_date", direction: "desc" },
+      { field: "document.first_publication_date", direction: "asc" },
     ],
     page: params.params.pid,
     pageSize: PAGE_SIZE
   });
+
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { PrismicLink, PrismicText, SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
 import { createClient } from "../../prismicio";
 import { components } from "../../slices";
@@ -21,7 +22,7 @@ const LatestArticle = ({ article }) => {
   );
 
   return (
-    <li>
+    <>
       <h1 className="mb-3 text-3xl inkTitle tracking-tighter text-slate-800 md:text-4xl flex ">
         <PrismicLink document={article}>
           <PrismicText field={article.data.title} />
@@ -30,11 +31,11 @@ const LatestArticle = ({ article }) => {
       <h3 className="font-serif italic tracking-tighter text-slate-500">
         {dateFormatter.format(date)}
       </h3>
-    </li>
+      </>
   );
 };
 
-const Article = ({ article, latestArticles, navigation, settings }) => {
+const Article = ({ article, nextArticle, previousArticle, latestArticles, navigation, settings }) => {
   const date = prismicH.asDate(
     article.data.publishDate || article.first_publication_date
   );
@@ -71,23 +72,26 @@ const Article = ({ article, latestArticles, navigation, settings }) => {
         </Bounded>
         <SliceZone slices={article.data.slices} components={components} />
       </article>
-      {latestArticles.length > 0 && (
-        <Bounded>
-          <div className="grid grid-cols-1 justify-items-center gap-16 md:gap-24">
-            <HorizontalDivider />
-            <div className="w-full">
-              <Heading size="2xl" className="mb-10 cursive">
-                Latest articles
+      <HorizontalDivider />
+      <div class="w-full flex gap-16 md:gap">
+        <div className="w-1/2">
+          {previousArticle ? (
+            <>
+              <Heading size="2xl" className="mt-10 cursive">
+                Previous:
               </Heading>
-              <ul className="grid grid-cols-1 gap-12">
-                {latestArticles.map((article) => (
-                  <LatestArticle key={article.id} article={article} />
-                ))}
-              </ul>
+            <LatestArticle key={previousArticle.id} article={previousArticle} />
+              </>
+          ) : null}
             </div>
-          </div>
-        </Bounded>
-      )}
+            <div className="w-1/2">
+              <Heading size="2xl" className="mt-10 cursive">
+                Next:
+              </Heading>
+                    <LatestArticle key={nextArticle.id} article={nextArticle} />
+            </div>
+    </div>
+        
     </Layout>
   );
 };
@@ -104,12 +108,49 @@ export async function getStaticProps({ params, previewData }) {
       { field: "document.first_publication_date", direction: "desc" },
     ],
   });
+  
+  let previousArticle;
+  try {
+    previousArticle = (await client.get({
+      pageSize: 1,
+      predicates: [
+        prismic.predicate.at('document.type', 'article'),
+        prismic.predicate.dateBefore("document.first_publication_date", article.first_publication_date)
+      ],
+      orderings: [
+        { field: "document.first_publication_date", direction: "desc" },
+      ],
+    }))?.results?.[0] || null;
+  
+  } catch (err) {
+    previousArticle = null;
+  }
+  
+  let nextArticle;
+  try {
+    nextArticle = (await client.get({
+      pageSize: 1,
+      predicates: [
+        prismic.predicate.at('document.type', 'article'),
+        prismic.predicate.dateAfter("document.first_publication_date", article.first_publication_date)
+      ],
+      orderings: [
+        { field: "document.first_publication_date", direction: "asc" },
+      ],
+    }))?.results?.[0] || null;
+  
+  } catch (err) {
+    nextArticle = null;
+  }
+
   const navigation = await client.getSingle("navigation");
   const settings = await client.getSingle("settings");
 
   return {
     props: {
       article,
+      nextArticle,
+      previousArticle,
       latestArticles,
       navigation,
       settings,
